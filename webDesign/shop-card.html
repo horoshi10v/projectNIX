@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Card</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+<!--HEADER-->
+<header class="navbar navbar-expand-md navbar-dark fixed-top">
+    <div class="header-style">
+        <ul class="nav col-12 col-md-auto mb-2 justify-content-center mb-md-0">
+            <li><a href="home.html" class="nav-link px-2 text-white">Home</a></li>
+            <li><a href="store.html" class="nav-link px-2 text-white">Store</a></li>
+            <li><a href="about.html" class="nav-link px-2 text-white">About</a></li>
+            <li><a href="shop-card.html" class="nav-link px-2 text-white">Shopping Cart</a></li>
+        </ul>
+    </div>
+    <div class="login-style">
+        <button type="button" class="btn btn-primary"onclick="document.location='index.html'">Login</button>
+    </div>
+</header>
+<wrapper>
+    <hr/>
+    <h2 class="text-start">Shopping cart</h2>
+    <hr/>
+    <div class="row m-auto">
+        <section class="order-content col-md-8">
+            <h3>Enter Your Data</h3>
+            <br>
+            <div class="container">
+                <div class="row g-2">
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="First Name">
+                        <label for="floatingInput"></label>
+                    </div>
+                    <div class="col-6">
+                        <input type="text" class="form-control" id="floatingInput" placeholder="Last Name">
+                        <label for="floatingInput"></label>
+                    </div>
+                    <div class="col-6">
+                        <input type="email" class="form-control" id="floatingInput" placeholder="name@example.com">
+                        <label for="floatingInput"></label>
+                        </div>
+                    <div class="col-6">
+                        <input type="number" class="form-control" id="floatingInput" placeholder="+1-xxx-xxx-xxx">
+                        <label for="floatingInput"></label>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h3>Check Your Order</h3>
+            <hr/>
+                <div class="card" >
+                    <div class="row g-0">
+                        <div class="col-md-3">
+                            <img src="res/ph-card-1.png" class="img-fluid rounded-start" alt="...">
+                        </div>
+                        <div class="col-md-7">
+                            <div class="card-body">
+                                <h5 class="card-title">HPE ProLiant ML30 Gen10 Tower Server,
+                                    Intel Xeon E-2124 Quad-Core 3.3GHz 8MB,
+                                    32GB DDR4 RAM, 8TB Storage,
+                                    RAID, iLO 5, Windows 2016</h5>
+                                <p class="card-text">This is a wider card with supporting text below as a natural lead-in to additional content. This content is a little bit longer.</p>
+                            </div>
+                        </div>
+                        <div class="col-md-2 p-sm-5">
+                            <h6 class="text-danger">$2,699.00</h6>
+                        </div>
+                    </div>
+                </div>
+            <br/>
+            <div class="card">
+                <div class="row g-0">
+                    <div class="col-md-3">
+                        <img src="res/ph-card-3.png" class="img-fluid rounded-start" alt="...">
+                    </div>
+                    <div class="col-md-7">
+                        <div class="card-body">
+                            <h5 class="card-title">Year Desktop Computer Protection Plan with Tech Support</h5>
+                            <p class="card-text">Real experts available 24/7 to help with set-up, connectivity issues, troubleshooting and much more.</p>
+                        </div>
+                    </div>
+                    <div class="col-md-2 p-sm-5">
+                        <h6 class="text-danger">$199.99</h6>
+                    </div>
+                </div>
+            </div>
+            <hr/>
+            <h5 class="text-end">Subtotal (2 items): $2,898.99</h5>
+        </section>
+        <section class= "order-content col-md-2">
+            <div class="card position-fixed">
+                <div class="card-body">
+                    <div class="describe-text">
+                        <h5 class="text-primary">Total Price: </h5>
+                        <hr/>
+                        <h5>$2,898.99</h5>
+                        <p class="card-text">FREE delivery <strong>December 23 - 28</strong> <a href="#">Details.</a></p>
+                        <p class="card-text">Or fastest delivery <strong>Monday, December 20.</strong></p>
+                        <hr/>
+                        <div class="d-grid gap-2">
+                            <button class="btn btn-primary btn-lg" type="button">Confirm The Order</button>
+                        </div>
+                        <p class="card-text"><small class="text-muted">Before ordering I have read and accepted the terms and conditions</small></p>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </div>
+</wrapper>
+
+<footer class="py-3 my-4">
+    <ul class="nav justify-content-center border-bottom pb-3 mb-3">
+        <li class="nav-item"><a href="home.html" class="nav-link px-2 text-muted">Home</a></li>
+        <li class="nav-item"><a href="store.html" class="nav-link px-2 text-muted">Store</a></li>
+        <li class="nav-item"><a href="about.html" class="nav-link px-2 text-muted">About</a></li>
+        <li class="nav-item"><a href="shop-card.html" class="nav-link px-2 text-muted">Shopping Cart</a></li>
+    </ul>
+    <p class="text-center text-muted">© 2021 by Khoroshylov</p>
+</footer>
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ka7Sk0Gln4gmtz2MlQnikT1wXgYsOg+OMhuP+IlRH9sENBO0LRn5q+8nbTov4+1p" crossorigin="anonymous"></script>
+</body>
+</html>
