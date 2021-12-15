@@ -3,6 +3,7 @@ package filesystem
 import (
 	"encoding/json"
 	"io"
+	"log"
 	"os"
 	"projectNIX/repositories/models"
 )
@@ -12,17 +13,17 @@ type UserFileRepository struct {
 
 func (ufu UserFileRepository) GetByEmail(_ string) (user models.User) {
 
-	userData := []byte{}
+	var userData []byte
 
 	file, err := os.Open("./datastore/files/user_1.json")
 	if err != nil {
-		panic(err)
-		return models.User{}
+		log.Fatal(err)
 	}
 	defer file.Close()
+
 	for {
-		chunk := make([]byte, 1024)
-		_, err = file.Read(chunk)
+		chunk := make([]byte, 64)
+		n, err := file.Read(chunk)
 		if err == io.EOF {
 			break
 		}
@@ -30,12 +31,12 @@ func (ufu UserFileRepository) GetByEmail(_ string) (user models.User) {
 			panic(err)
 		}
 
-		userData = append(userData, chunk...)
+		userData = append(userData, chunk[:n]...)
 	}
 
 	err = json.Unmarshal(userData, &user)
 	if err != nil {
-		panic(err)
+		log.Fatal(err)
 	}
 
 	return user
