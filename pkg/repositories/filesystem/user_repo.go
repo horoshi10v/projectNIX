@@ -15,7 +15,7 @@ func (ufu UserFileRepository) GetByEmail(_ string) (user models.User) {
 
 	var userData []byte
 
-	file, err := os.Open("./datastore/files/user_1.json")
+	file, err := os.Open("./datastore/filesystem/user_1.json")
 	if err != nil {
 		log.Fatal(err)
 	}
