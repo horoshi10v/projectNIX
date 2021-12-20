@@ -5,7 +5,7 @@ import (
 	"io"
 	"log"
 	"os"
-	"projectNIX/repositories/models"
+	"projectNIX/pkg/repositories/models"
 )
 
 type UserFileRepository struct {

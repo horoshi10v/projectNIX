@@ -2,7 +2,7 @@ package main
 
 import (
 	"fmt"
-	"projectNIX/repositories/filesystem"
+	"projectNIX/pkg/repositories/filesystem"
 )
 
 func main() {

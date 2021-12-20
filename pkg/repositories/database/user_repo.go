@@ -1,6 +1,8 @@
 package database
 
-import "projectNIX/repositories/models"
+import (
+	"projectNIX/pkg/repositories/models"
+)
 
 type UserDBRepository struct{}
 
